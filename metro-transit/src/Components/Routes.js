@@ -35,8 +35,6 @@ export function Routes(props) {
         clearInterval(stopTimer);
         setStopTimer(setInterval(() => updateDepartureData(), 60000));
     }, [selectedRoute, selectedDirection, selectedStop]);
-
-
     
     // Makes API call to get directions list in the select dropdown and append the selected route to the URL
     const handleRouteChange = (event) => {
@@ -49,9 +47,8 @@ export function Routes(props) {
         setSelectedRoute('');
         setSelectedDirection('');
         if (value !== 'Select route') {
-        history.push(`/${value}`);
-        fetchApi('directions/'+value)
-        .then(direction => {setDirectionsData(direction); setShowDirection(true); setSelectedRoute(value);})
+            fetchApi('directions/'+value)
+            .then(direction => {setDirectionsData(direction); setShowDirection(true); setSelectedRoute(value);})
         } 
     }
 
@@ -65,9 +62,8 @@ export function Routes(props) {
         setDepartureData([]);
         setShowDepartureList(false);
         if (value !== 'Select direction') {
-        history.push(`/${selectedRoute}/${value}`);
-        fetchApi('stops/'+selectedRoute+'/'+value)
-        .then(stops => {setStopsData(stops); setSelectedDirection(value); setShowStop(true);})
+            fetchApi('stops/'+selectedRoute+'/'+value)
+            .then(stops => {setStopsData(stops); setSelectedDirection(value); setShowStop(true);})
         } 
     }
 
@@ -77,11 +73,12 @@ export function Routes(props) {
         setSelectedStop('');
         setShowDepartureList(false);
         setDepartureData([]);
+        setDepartureListStops([]);
         if (value !== 'Select stop') {
-        history.push(`/${selectedRoute}/${selectedDirection}/${value}`);
-        fetchApi(selectedRoute+'/'+selectedDirection+'/'+value)
-        .then(departureList => {setDepartureData(departureList.departures); setDepartureListStops(departureList.stops); setSelectedStop(value); setShowDepartureList(true);})
-        } 
+            history.push(`/${selectedRoute}/${selectedDirection}/${value}`);
+            fetchApi(selectedRoute+'/'+selectedDirection+'/'+value)
+            .then(departureList => {setDepartureData(departureList.departures); setDepartureListStops(departureList.stops); setSelectedStop(value); setShowDepartureList(true);})
+        }
     }
 
 	return (
