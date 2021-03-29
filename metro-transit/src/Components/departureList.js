@@ -13,7 +13,7 @@ export function DepartureList(props) {
             setDepartureCountToShow(3);
             setDepartureExpanded(false);
         }
-      }
+    }
     
     const departureList = props.departureList;
     const stops = props.stops;
@@ -47,7 +47,7 @@ export function DepartureList(props) {
                                 </thead>
                                 {departureList.slice(0, departureCountToShow).map(departure => {
                                     return (
-                                            <tbody className="departure-data" key={departure.route_id}>
+                                            <tbody className="departure-data" key={departure.trip_id}>
                                                 <tr className="departure-list-content">
                                                     <td className="route-details"><strong>{departure.route_short_name}</strong></td>
                                                     <td className="route-details">{departure.description}</td>
@@ -60,7 +60,7 @@ export function DepartureList(props) {
                             </div>
                     </div>
                 }
-                    {/* show more/less departure list button */}
+                    {/* Display expand and collapse icons to toggle departure list */}
                     { departureList.length > 3 && 
                     <div className="button-container">
                         <button className="departure-toggle" onClick={showMoreDeparture}>

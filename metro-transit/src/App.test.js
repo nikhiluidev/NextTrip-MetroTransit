@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import {Routes} from './Components/Routes';
 
 test('renders Real-time Departures heading', () => {
   render(<App />);
