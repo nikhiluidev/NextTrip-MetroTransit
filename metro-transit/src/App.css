@@ -25,6 +25,10 @@
   .banner {
     height: 160px;
   }
+  .banner h1 {
+    height: 10px;
+    font-size: 14px !important;
+  }
   .departure-list-panel {
     padding-left: 0;
     padding-right: 0;
@@ -33,6 +37,10 @@
 }
 
 @media (min-width:768px) and (max-width: 1024px){
+  .banner h1 {
+    height: 20px;
+    font-size: 18px !important;
+  }
   .departure-list-panel {
     padding-left: 30px !important;
     padding-right: 30px !important;
@@ -60,7 +68,7 @@
   margin-bottom: 0;
   padding: 1.125rem;
   width: auto;
-  font-size: 2rem !important;
+  font-size: 2rem;
   left: 100px;
   bottom: 45px;
 }
@@ -236,6 +244,8 @@
   display: inline-block;
 }
 .expand {
+  width: 20px;
+  height: 20px;
   background: url('./images/circle-minus-blue.svg') no-repeat center;
   background-size: contain;
 }
