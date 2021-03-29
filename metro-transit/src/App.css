@@ -17,6 +17,39 @@
   background-repeat: no-repeat;
   height: 20rem;
   position: relative;
+  width: 100%;
+}
+
+
+@media (max-width:767px){
+  .banner {
+    height: 160px;
+  }
+  .departure-list-panel {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100% !important;
+  }
+}
+
+@media (min-width:768px) and (max-width: 1024px){
+  .departure-list-panel {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    width: 700px !important;
+  }
+}
+
+@media (min-width:1025px) and (max-width: 1320px){
+  .departure-list-panel {
+    width: 1000px !important;
+  }
+}
+
+@media (min-width:1321px){
+  .departure-list-panel {
+    width: 1300px !important;
+  }
 }
 
 .banner h1 {
@@ -53,6 +86,7 @@
 }
 
 .page-title {
+  width: 100%;
   font-weight: 700;
   line-height: 1.2;
   font-size: 32px;
@@ -95,7 +129,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
   color: #626462;
-  width: 1140px;
   margin: 0 auto;
   margin-top: 20px;
 }
