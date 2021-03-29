@@ -86,9 +86,9 @@ export function Routes(props) {
             <div className="select-panel">
             {/* Display routes select dropdown if there is routes data and handle route change */}
             { routeData.length ? 
-                <select className="custom-select" onChange={handleRouteChange}>
+                <select data-testid="selectRoute" className="custom-select" onChange={handleRouteChange}>
                     <option>Select route</option>
-                    { routeData.map(route => <option key={route.route_id} value={route.route_id}>{route.route_label}</option>)}
+                    { routeData.map(route => <option role="routeOption" key={route.route_id} value={route.route_id}>{route.route_label}</option>)}
                 </select> :
                 (routeData.errors && <div>We are unable to get the desired route option for you to select, Kindly try again after some time</div>) }
                 {/* Display directions select dropdown if there is directions data and handle direction change */}

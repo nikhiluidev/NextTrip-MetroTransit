@@ -19,7 +19,7 @@ export function DepartureList(props) {
     const stops = props.stops;
     
     return (
-        <div className="departure-list-panel">
+        <div className="departure-list-panel" >
             { (stops !== undefined || departureList !== undefined) ?
                 <div>
                     <div className="stop-panel">
@@ -47,8 +47,8 @@ export function DepartureList(props) {
                                 </thead>
                                 {departureList.slice(0, departureCountToShow).map(departure => {
                                     return (
-                                            <tbody className="departure-data">
-                                                <tr className="departure-list-content" key={departure.route_id}>
+                                            <tbody className="departure-data" key={departure.route_id}>
+                                                <tr className="departure-list-content">
                                                     <td className="route-details"><strong>{departure.route_short_name}</strong></td>
                                                     <td className="route-details">{departure.description}</td>
                                                     <td className="departure-text">{departure.actual && <span className="blink"></span>}<strong>{departure.departure_text}</strong></td>
@@ -64,15 +64,15 @@ export function DepartureList(props) {
                     { departureList.length > 3 && 
                     <div className="button-container">
                         <button className="departure-toggle" onClick={showMoreDeparture}>
-                            <span className={departureExpanded ? 'expand': 'colapsed'}></span>
+                            <span data-testid={departureExpanded ? 'expand': 'colapsed'} className={departureExpanded ? 'expand': 'colapsed'}></span>
                             Departures
                         </button>
                     </div>
                     }
                 </div>
                 :
-                // Error message in case of any api service fails or wrong data passed
-                <div>We are unable to get the desired direction for your select, Kindly try chaning the option for the route, direction and stop</div>
+                // Error message in case of any api service fails or incorrect data passed
+                <div>We are unable to get the desired direction for your select, Kindly try changing the option for the route, direction and stop</div>
             }
         </div>
     );
