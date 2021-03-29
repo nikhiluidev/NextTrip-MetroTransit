@@ -31,13 +31,13 @@ Your app is ready to be deployed!
 
 index.js - This is the main entry point of the app.
 App.js - This component renders Route Component
-Routes.js - This component renders and displays Routes, Departures and Stops based on the selections
+Routes.js - This component renders and displays Routes, Directions and Stops based on the selections
 departureList.js - This component renders respective departure details from the route, direction, stop selections.
 App.test.js - This contains all tests using React Testing library.
 fetchData - This contains method to fetch the data through Axios.
 
 ## Assumptions Made
 On initial page render, routes API call is called to get all the routes.
-When there is selected route, departure and stop make the departures list API call every 1minute as the dpearture times changes every 1minute.
-The container is responsive. Hence, added different view posrts to make it responsive.
-After the stop selection is done, the URL shows the path with selected route/selected departure/ selected stop.
+When there is selected route, direction and stop make the departures list API call every 1minute as the dpearture times changes every 1minute.
+The container is responsive. Hence, added different view ports to make it responsive.
+After the stop selection is done, the URL shows the path with selected route/selected direction/ selected stop.
