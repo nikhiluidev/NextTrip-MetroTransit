@@ -15,7 +15,7 @@
   background-size: cover;
   background-position: 90%;
   background-repeat: no-repeat;
-  height: 20rem;
+  height: 320px;
   position: relative;
   width: 100%;
 }
@@ -66,9 +66,9 @@
   color: #8a8b8a;
   opacity: 0.9;
   margin-bottom: 0;
-  padding: 1.125rem;
+  padding: 18px;
   width: auto;
-  font-size: 2rem;
+  font-size: 32px;
   left: 100px;
   bottom: 45px;
 }
@@ -129,7 +129,7 @@
   -moz-appearance: none;
   appearance: none;
   margin: 10px 0;
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 12px center/8px 10px;
 }
 
 .departure-list-panel {
@@ -168,8 +168,8 @@
 .blink {
   -webkit-animation: blink 1s infinite alternate;
   animation: blink 1s infinite alternate;
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   background: url('./images/broadcast-blue.svg') no-repeat;
   background-size: contain;
   display: inline-block;
@@ -186,7 +186,7 @@
 
 .departure-container {
   width: 100%;
-  margin-bottom: .5rem;
+  margin-bottom: 8px;
   border-spacing: 0px;
 }
 
@@ -197,7 +197,7 @@
     border-bottom: none;
     text-transform: uppercase;
     letter-spacing: 1.28px;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
     padding: 12px 12px 12px 24px;
     line-height: 27px;
